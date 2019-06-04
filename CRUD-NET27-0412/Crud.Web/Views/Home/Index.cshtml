@@ -1,0 +1,61 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">我的便签</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/Note/Create"><span class="glyphicon glyphicon-plus"></span>新建</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div class="container">
+        <div class="col-md-3 col-xs-12">
+            <div class="list-group">
+                @foreach (var item in ViewBag.NoteTypes) {
+
+                    <a href="/Home/Index/@item.Id" class="list-group-item">@item.Name</a>
+                }
+            </div>
+
+        </div>
+        <div class="col-md-9 col-xs-12">
+            @foreach (var item in ViewBag.Notes) {
+            <div style="border-bottom:1px solid #ddd;margin:0 5px">
+                    <h2>@item.Title</h2>
+                    <p>@item.Content</p>
+                    <p class="text-right">
+                        <date>@item.CreateDate</date>
+                        <a onclick="return confirm('确定要删除妈?')" href="/Note/Delete/@item.Id">删除</a>
+                        <a href="/Note/Edit/@item.Id">修改</a>
+                </p>
+            </div>
+            }
+        </div>
+    </div>
+    <script src="~/Content/js/jquery-2.1.4.min.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+</body>
+</html>
