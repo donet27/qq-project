@@ -6,3 +6,10 @@ E:\shangkeanli\NET27\CRUD-NET27-0412\Crud.Services\bin\Debug\Curd.Model.pdb
 E:\shangkeanli\NET27\CRUD-NET27-0412\Crud.Services\obj\Debug\Crud.Services.csprojResolveAssemblyReference.cache
 E:\shangkeanli\NET27\CRUD-NET27-0412\Crud.Services\obj\Debug\Crud.Services.dll
 E:\shangkeanli\NET27\CRUD-NET27-0412\Crud.Services\obj\Debug\Crud.Services.pdb
+E:\Y2\qq-project\CRUD-NET27-0412\Crud.Services\bin\Debug\Crud.Services.dll
+E:\Y2\qq-project\CRUD-NET27-0412\Crud.Services\bin\Debug\Crud.Services.pdb
+E:\Y2\qq-project\CRUD-NET27-0412\Crud.Services\bin\Debug\Curd.Model.dll
+E:\Y2\qq-project\CRUD-NET27-0412\Crud.Services\bin\Debug\Curd.Model.pdb
+E:\Y2\qq-project\CRUD-NET27-0412\Crud.Services\obj\Debug\Crud.Services.csprojResolveAssemblyReference.cache
+E:\Y2\qq-project\CRUD-NET27-0412\Crud.Services\obj\Debug\Crud.Services.dll
+E:\Y2\qq-project\CRUD-NET27-0412\Crud.Services\obj\Debug\Crud.Services.pdb
