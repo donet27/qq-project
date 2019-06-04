@@ -1,0 +1,6 @@
+E:\shangkeanli\NET27\CRUD-NET27-0412\Curd.Model\bin\Debug\Curd.Model.dll
+E:\shangkeanli\NET27\CRUD-NET27-0412\Curd.Model\bin\Debug\Curd.Model.pdb
+E:\shangkeanli\NET27\CRUD-NET27-0412\Curd.Model\bin\Debug\EntityFramework.DLL
+E:\shangkeanli\NET27\CRUD-NET27-0412\Curd.Model\obj\Debug\Curd.Model.csprojResolveAssemblyReference.cache
+E:\shangkeanli\NET27\CRUD-NET27-0412\Curd.Model\obj\Debug\Curd.Model.dll
+E:\shangkeanli\NET27\CRUD-NET27-0412\Curd.Model\obj\Debug\Curd.Model.pdb

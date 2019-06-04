@@ -1,0 +1,60 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>编辑</title>
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">我的便签</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/Note/Create"><span class="glyphicon glyphicon-plus"></span>新建</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div class="container">
+        <h1>编辑笔记</h1>
+        <form class="form-horizontal" method="post" action="/Note/Edit">
+            <div class="input-group input-group" style="margin:10px 0">
+                <span class="input-group-addon" id="sizing-addon1">分类</span>
+                <select name="NoteTypeId" class="form-control">
+                    @foreach (var item in ViewBag.NoteTypes) {
+                        <option @(item.Id == ViewBag.Note.Id ? "selected" : "") value="@(item.Id)">@(item.Name)</option>
+                    }
+                </select>
+            </div>
+            <div class="input-group" style="margin:10px 0">
+                <span class="input-group-addon" id="sizing-addon2">标题</span>
+                <input name="Title" value="@(ViewBag.Note.Title)" type="text" class="form-control" placeholder="标题" aria-describedby="sizing-addon2" />
+            </div>
+            <div class="input-group" style="margin:10px 0">
+                <span class="input-group-addon" id="sizing-addon2">内容</span>
+                <textarea name="Content" rows="5" class="form-control" placeholder="记录你的点点滴滴" aria-describedby="sizing-addon2"> @(ViewBag.Note.Content)</textarea>
+            </div>
+            <input name="Id" type="hidden"  value="@(ViewBag.Note.Id)"/>
+            <button type="submit" class="btn btn-primary">保存</button>
+        </form>
+    </div>
+
+    <script src="~/Content/js/jquery-2.1.4.min.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+</body>
+</html>
